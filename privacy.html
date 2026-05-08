@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — TimeTill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+</head>
+<body>
+
+<header class="nav">
+    <a href="index.html" class="brand">
+        <img src="icon.svg" alt="" class="brand-icon" />
+        <span class="brand-name">TimeTill</span>
+    </a>
+    <nav>
+        <a href="index.html#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="index.html#download" class="cta">Download</a>
+    </nav>
+</header>
+
+<main class="legal">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <span id="date">May 8, 2026</span></p>
+
+    <p><strong>TimeTill does not collect, transmit, or sell any personal data.</strong> The whole app is built around being able to say that.</p>
+
+    <h2>What TimeTill reads</h2>
+    <p>The app reads upcoming events from the Calendar database on your iPhone and Apple Watch through Apple's EventKit framework. This data is used only to render:</p>
+    <ul>
+        <li>The next-event countdown shown in the app</li>
+        <li>Home Screen and Lock Screen widgets</li>
+        <li>The Live Activity in the Dynamic Island and on your Lock Screen</li>
+        <li>Apple Watch complications and the watch app</li>
+    </ul>
+    <p>Event data never leaves your devices. There is no server, no account, no cloud.</p>
+
+    <h2>What TimeTill stores</h2>
+    <p>The app stores user preferences locally — which calendars you've enabled, your widget configuration choices, and onboarding state — in the device's <code>UserDefaults</code> database. These preferences are shared between the iPhone app and its widget extensions via an App Group, but are not transmitted off your device.</p>
+    <p>Between iPhone and Apple Watch, TimeTill uses Apple's WatchConnectivity framework to send a snapshot of your upcoming events from the iPhone to its paired Apple Watch. This communication is end-to-end encrypted by Apple and goes only between your two devices.</p>
+
+    <h2>What TimeTill does <em>not</em> do</h2>
+    <ul>
+        <li>No analytics SDKs (no Google Analytics, no Mixpanel, no Firebase, nothing)</li>
+        <li>No advertising identifiers</li>
+        <li>No third-party tracking domains</li>
+        <li>No cookies (the app isn't a website; this site uses only Google Fonts, which is the only third-party connection)</li>
+        <li>No login, account, or sign-in</li>
+        <li>No background location, microphone, camera, photos, contacts, or health data</li>
+    </ul>
+
+    <h2>Permissions we ask for</h2>
+    <ul>
+        <li><strong>Calendar</strong> (required) — so we can read your events. We never modify or delete events.</li>
+        <li><strong>Live Activities</strong> (optional, on by default; togglable in Settings) — so the app can fade into the Dynamic Island as your event approaches.</li>
+        <li><strong>Background App Refresh</strong> (optional, system-controlled) — so the app can sync your events to widgets and your watch even when you don't open it.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>TimeTill does not knowingly collect any data from anyone. The app is rated 4+ in the App Store.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If anything ever changes, this page will be updated and the date at the top will change. The app's privacy posture is core to its design — we don't anticipate adding tracking.</p>
+
+    <h2>Contact</h2>
+    <p>Questions, concerns, or just want to say hi? <a href="mailto:hello@timetillapp.com">hello@timetillapp.com</a></p>
+</main>
+
+<footer class="footer">
+    <p>© <span id="year">2026</span> TimeTill. Made with ☀️ in SwiftUI.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:hello@timetillapp.com">Support</a></p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
