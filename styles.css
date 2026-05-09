@@ -594,16 +594,83 @@ img { max-width: 100%; display: block; }
 .legal p, .legal li { color: #2a2a30; font-size: 16px; }
 .legal ul { padding-left: 20px; }
 
-/* ─── Responsive ─── */
+/* ─── Responsive: tablet & smaller ─── */
 @media (max-width: 900px) {
     .nav { padding: 18px 20px; }
     .nav nav a { margin-left: 16px; }
-    .hero { padding: 50px 20px 70px; grid-template-columns: 1fr; gap: 40px; }
-    .hero-card { transform: rotate(-2deg); margin: 0 auto; }
+    .hero {
+        padding: 40px 20px 60px;
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: left;
+    }
+    .hero-card { transform: rotate(-2deg); margin: 0 auto; width: 280px; }
+    .card-count { font-size: 32px; }
     .features { padding: 70px 20px; }
-    .feature-grid { grid-template-columns: 1fr; }
+    .features-intro { margin-bottom: 44px; }
+    .feature-grid { grid-template-columns: 1fr; gap: 14px; }
+    .feature { padding: 24px; }
     .privacy-band { padding: 70px 20px; }
     .download { padding: 70px 20px; }
+    .showcase { padding: 70px 16px 40px; }
+    .showcase-intro { margin-bottom: 36px; }
+    .faq { padding: 70px 20px; }
+    .madeby { padding: 70px 20px; }
+}
+
+/* ─── Phone (≤ 540px) ─── */
+@media (max-width: 540px) {
+    .nav { padding: 16px 18px; }
+    .nav nav a:not(.cta) { display: none; }
+    .nav nav a.cta { margin-left: 0; padding: 8px 18px; font-size: 14px; }
+    .brand-name { font-size: 16px; }
+
+    .hero { padding: 28px 18px 52px; gap: 28px; }
+    .hero h1 { font-size: 38px; line-height: 1.05; margin-bottom: 16px; }
+    .lede { font-size: 17px; margin-bottom: 24px; }
+    .hero-cta { gap: 8px; }
+    .btn-primary { padding: 13px 22px; font-size: 14px; }
+    .btn-ghost { padding: 13px 8px; font-size: 14px; }
+    .hero-card { width: 240px; padding: 22px; border-radius: 26px; }
+    .card-count { font-size: 28px; }
+    .card-event { font-size: 16px; }
+    .card-meta { font-size: 12px; }
+
+    .features { padding: 56px 18px; }
+    .features-intro h2 { font-size: 26px; }
+    .features-intro p { font-size: 15px; }
+    .feature h3 { font-size: 17px; }
+    .feature p { font-size: 14px; }
+
+    .showcase { padding: 56px 16px 32px; }
+    .showcase-intro h2 { font-size: 26px; }
+    .showcase-intro p { font-size: 15px; }
+    .shots-row { gap: 12px; padding: 0 8px; margin-bottom: 44px; }
+    .shots-row-label { font-size: 11px; margin-bottom: 0; }
+    .shot-iphone { width: 30%; min-width: 100px; max-width: 130px; border-radius: 18px; }
+    .shot-watch  { width: 130px; padding: 8px; border-radius: 24px; }
+
+    .privacy-band { padding: 56px 20px; }
+    .privacy-band h2 { font-size: 26px; }
+    .privacy-band p { font-size: 16px; }
+    .checks { gap: 8px 18px; font-size: 14px; }
+
+    .faq { padding: 56px 18px; }
+    .faq h2 { font-size: 24px; margin-bottom: 28px; }
+    .faq summary { padding: 16px 18px; font-size: 15px; }
+    .faq details p { padding: 0 18px 18px; font-size: 14px; }
+
+    .madeby { padding: 56px 20px; }
+    .madeby h2 { font-size: 26px; }
+    .madeby p { font-size: 15px; }
+
+    .download { padding: 56px 20px 70px; }
+    .download h2 { font-size: 30px; }
+    .download p { font-size: 15px; margin-bottom: 24px; }
+    .btn-primary.big { padding: 16px 30px; font-size: 16px; }
+
+    .footer { padding: 24px 18px; font-size: 13px; }
+    .footer p { line-height: 1.6; }
 }
 
 /* ─── Dark mode ─── */
@@ -665,10 +732,7 @@ img { max-width: 100%; display: block; }
     .shot-watch  { width: 140px; }
     .shots-row { gap: 16px; padding: 0 16px; }
 }
-@media (max-width: 540px) {
-    .shot-iphone { width: 44%; max-width: 200px; }
-    .shots-row { gap: 12px; }
-}
+/* (mobile shot sizing handled in main mobile block above) */
 
 @media (prefers-color-scheme: dark) {
     .shot { box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06); }
